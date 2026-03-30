@@ -74,16 +74,16 @@ export const projects = [
     id: 1,
     title: "AI Research Assistant",
     des: "Built an AI research assistant with JWT authentication, document ingestion (text/URL), and a context-aware RAG system using pgvector embeddings, enabling semantic search, summarization, and intelligent Q&A over unstructured data.",
-    img: "/research.png", // (add image if you have, else keep any temp image)
+    img: "/research.png",
     iconLists: [
-      "/icons/python.svg",
-      "/icons/langchain.svg",
-      "/icons/postgres.svg",
+      "/python1.png",
+      "/langchain-color.png",
+      "/postgre.png",
     ],
     link: "https://github.com/karanexc/ai-research-assistant",
   },
   {
-    id: 1,
+    id: 2,
     title: "AI Job Market Intelligence Platform",
     des: "Built a scalable end-to-end AI system processing 10,000+ job listings using web scraping, NLP-based skill extraction, and embedding-driven semantic search for real-time job matching and recommendations.",
     img: "/ai-job-market.jpg",
@@ -91,7 +91,7 @@ export const projects = [
     link: "https://github.com/karanexc/ai-job-market-intelligence",
   },
   {
-    id: 2,
+    id: 3,
     title: "Medical Chatbot (RAG)",
     des: "Developed a RAG-based chatbot using LangChain, Pinecone, and LLMs with vector embeddings and semantic search to deliver accurate, context-aware responses while reducing hallucinations.",
     img: "/medical-chatbot.webp",
@@ -99,11 +99,11 @@ export const projects = [
     link: "https://github.com/karanexc/Medical-Chatbot",
   },
   {
-    id: 3,
+    id: 4,
     title: "UK Traffic Sign Recognition",
     des: "Trained deep learning models (ResNet, MobileNet) for multi-class traffic sign classification achieving 96% accuracy using data augmentation and optimized preprocessing pipelines.",
     img: "/traffic-final.jpg",
-    iconLists: ["/python1.png", "/huggingface.png", "docker.png"],
+    iconLists: ["/python1.png", "/huggingface.png", "/docker.png"],
     link: "https://github.com/karanexc",
   },
 ];
@@ -146,7 +146,7 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Professional Esports Athlete ",
+    title: "Professional Esports Athlete",
     desc: "Led and managed a competitive esports team, coordinating strategies, training sessions, and performance analysis, strengthening leadership and teamwork skills under high-pressure environments.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
