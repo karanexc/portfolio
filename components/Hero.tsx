@@ -53,8 +53,8 @@ const Hero = () => {
             focusing on real-world applications like RAG systems, computer vision, and intelligent automation.
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col items-center gap-4 mt-6">
+          {/* Buttons - FIXED: Now side by side on desktop, stacked on mobile */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
             <a href="#projects">
               <MagicButton
                 title="View My Work"
@@ -65,7 +65,7 @@ const Hero = () => {
 
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <MagicButton
-                title="View my Resume"
+                title="View My Resume"
                 icon={<FaLocationArrow />}
                 position="right"
               />

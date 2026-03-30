@@ -2,14 +2,23 @@
 
 import React from "react";
 
-const skills = [
-  { name: "Python", level: "Advanced", width: "90%" },
-  { name: "TensorFlow", level: "Intermediate", width: "80%" },
-  { name: "LangChain / RAG", level: "Advanced", width: "85%" },
-  { name: "FastAPI", level: "Intermediate", width: "75%" },
-  { name: "AWS", level: "Intermediate", width: "75%" },
-  { name: "Docker", level: "Intermediate", width: "70%" },
-  { name: "PostgreSQL / pgvector", level: "Intermediate", width: "75%" },
+const skillCategories = [
+  {
+    category: "Programming & Core",
+    skills: ["Python", "SQL", "Bash"]
+  },
+  {
+    category: "ML & Deep Learning",
+    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Pandas", "NumPy"]
+  },
+  {
+    category: "GenAI & LLMs",
+    skills: ["LangChain","AI Agents", "RAG", "Vector DB", "Hugging Face"]
+  },
+  {
+    category: "MLOps & Cloud",
+    skills: ["FastAPI", "Docker", "AWS", "CI/CD"]
+  }
 ];
 
 const TechStack = () => {
@@ -19,25 +28,24 @@ const TechStack = () => {
         My <span className="text-purple">Tech Stack</span>
       </h1>
 
-      <div className="max-w-md mx-auto mt-12 space-y-6">
-        {skills.map((skill, index) => (
-          <div key={index}>
-            {/* Title */}
-            <div className="flex justify-between mb-2">
-              <span className="text-white font-medium">
-                {skill.name}
-              </span>
-              <span className="text-sm text-[#C1C2D3]">
-                {skill.level}
-              </span>
-            </div>
-
-            {/* Progress bar */}
-            <div className="w-full h-2 bg-[#1a1f3a] rounded-full overflow-hidden">
-              <div
-                className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full transition-all duration-700"
-                style={{ width: skill.width }}
-              />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
+        {skillCategories.map((category, idx) => (
+          <div
+            key={idx}
+            className="group bg-black-200/50 rounded-2xl p-6 border border-white/10 hover:border-purple/30 transition-all duration-300 hover:-translate-y-1"
+          >
+            <h3 className="text-purple font-semibold text-lg mb-4 border-b border-purple/30 pb-2">
+              {category.category}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {category.skills.map((skill, skillIdx) => (
+                <span
+                  key={skillIdx}
+                  className="px-3 py-1.5 rounded-full bg-purple/10 text-purple text-sm border border-purple/30 hover:border-purple transition-all duration-300"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         ))}
